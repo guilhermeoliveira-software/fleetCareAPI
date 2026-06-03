@@ -1,9 +1,19 @@
 package entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Table(name = "Veiculo")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Veiculo {
 
     @Id
@@ -19,23 +29,7 @@ public class Veiculo {
     @Column(name = "quilometragemAtual", length = 255)
     private Double quilometragemAtual;
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    @OneToMany(mappedBy = "veiculo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrdemServico> ordensDeServico;
 
-    public String getPlaca() { return placa; }
-    public void setPlaca(String placa) { this.placa = placa; }
-
-    public String getModelo() { return modelo; }
-    public void setModelo(String modelo) { this.modelo = modelo; }
-
-    public Integer getAno() { return ano; }
-    public void setAno(Integer ano) { this.ano = ano; }
-
-    public Double getQuilometragemAtual() {
-        return quilometragemAtual;
-    }
-
-    public void setQuilometragemAtual(Double quilometragemAtual) {
-        this.quilometragemAtual = quilometragemAtual;
-    }
 }

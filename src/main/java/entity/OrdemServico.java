@@ -1,10 +1,17 @@
 package entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@Table(name = "OrdemServico")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrdemServico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,46 +23,17 @@ public class OrdemServico {
     private double valorOrcado;
     @Column(name = "mecanicoResponsavel", length = 255)
     private String mecanicoResponsavel;
+
+    @ManyToOne
+    @JoinColumn(name = "mecanico_id", nullable = false)
+    private Mecanico mecanico;
+
+    @ManyToOne
+    @JoinColumn(name = "veiculo_id", nullable = false)
+    private Veiculo veiculo;
+
     @Column(name = "status")
     private String status;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDescricaoProblema() {
-        return descricaoProblema;
-    }
-
-    public void setDescricaoProblema(String descricaoProblema) {
-        this.descricaoProblema = descricaoProblema;
-    }
-
-    public String getMecanicoResponsável() {
-        return mecanicoResponsavel;
-    }
-
-    public void setMecanicoResponsavel(String mecanicoResponsavel) {
-        this.mecanicoResponsavel = mecanicoResponsavel;
-    }
-
-    public double getValorOrcado() {
-        return valorOrcado;
-    }
-
-    public void setValorOrcado(double valorOrcado) {
-        this.valorOrcado = valorOrcado;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
