@@ -1,4 +1,4 @@
-package entity;
+package com.techlevs.fleetCareAPI.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

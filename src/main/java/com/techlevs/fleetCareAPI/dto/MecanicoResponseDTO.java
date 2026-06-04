@@ -1,4 +1,4 @@
-package dto;
+package com.techlevs.fleetCareAPI.dto;
 
 public record MecanicoResponseDTO(
         Long id,

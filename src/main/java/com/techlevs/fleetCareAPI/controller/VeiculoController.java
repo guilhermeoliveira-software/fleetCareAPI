@@ -1,8 +1,8 @@
-package controller;
+package com.techlevs.fleetCareAPI.controller;
 
-import business.OrdemServicoService;
-import dto.VeiculoRequestDTO;
-import entity.Veiculo;
+import com.techlevs.fleetCareAPI.business.OrdemServicoService;
+import com.techlevs.fleetCareAPI.dto.VeiculoRequestDTO;
+import com.techlevs.fleetCareAPI.entity.Veiculo;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

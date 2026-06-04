@@ -1,6 +1,6 @@
-package entity;
+package com.techlevs.fleetCareAPI.entity;
 
-import business.enums.StatusOrdem;
+import com.techlevs.fleetCareAPI.business.enums.StatusOrdem;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

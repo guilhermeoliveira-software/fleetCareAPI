@@ -1,7 +1,7 @@
-package dto;
+package com.techlevs.fleetCareAPI.dto;
 
-import entity.Mecanico;
-import entity.Veiculo;
+import com.techlevs.fleetCareAPI.entity.Mecanico;
+import com.techlevs.fleetCareAPI.entity.Veiculo;
 
 public record OrdemServicoResponseDTO(
         Long id,

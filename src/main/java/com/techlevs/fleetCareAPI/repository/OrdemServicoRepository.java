@@ -1,6 +1,6 @@
-package repository;
+package com.techlevs.fleetCareAPI.repository;
 
-import entity.OrdemServico;
+import com.techlevs.fleetCareAPI.entity.OrdemServico;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

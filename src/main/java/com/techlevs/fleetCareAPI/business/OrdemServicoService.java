@@ -1,18 +1,18 @@
-package business;
+package com.techlevs.fleetCareAPI.business;
 
-import business.enums.StatusOrdem;
-import business.exception.BusinessRuleException;
-import business.exception.ResourceNotFoundException;
-import dto.VeiculoRequestDTO;
-import entity.Mecanico;
-import entity.OrdemServico;
-import entity.Veiculo;
+import com.techlevs.fleetCareAPI.business.enums.StatusOrdem;
+import com.techlevs.fleetCareAPI.business.exception.BusinessRuleException;
+import com.techlevs.fleetCareAPI.business.exception.ResourceNotFoundException;
+import com.techlevs.fleetCareAPI.dto.VeiculoRequestDTO;
+import com.techlevs.fleetCareAPI.entity.Mecanico;
+import com.techlevs.fleetCareAPI.entity.OrdemServico;
+import com.techlevs.fleetCareAPI.entity.Veiculo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.MecanicoRepository;
-import repository.OrdemServicoRepository;
-import repository.VeiculoRepository;
+import com.techlevs.fleetCareAPI.repository.MecanicoRepository;
+import com.techlevs.fleetCareAPI.repository.OrdemServicoRepository;
+import com.techlevs.fleetCareAPI.repository.VeiculoRepository;
 
 @Service
 @RequiredArgsConstructor
@@ -25,7 +25,7 @@ public class OrdemServicoService {
     @Transactional
     public Veiculo cadastrarVeiculo(VeiculoRequestDTO dto) {
         if (veiculoRepository.existsByPlaca(dto.placa())) {
-            throw new RuntimeException("Já existe um veículo cadastrado com a placa " + dto.placa());
+            throw new BusinessRuleException("Já existe um veículo cadastrado com a placa " + dto.placa());
         }
 
         Veiculo veiculo = new Veiculo();

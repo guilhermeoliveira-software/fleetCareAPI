@@ -1,6 +1,6 @@
-package business.exception;
+package com.techlevs.fleetCareAPI.business.exception;
 
-import dto.ErrorResponseDTO;
+import com.techlevs.fleetCareAPI.dto.ErrorResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
