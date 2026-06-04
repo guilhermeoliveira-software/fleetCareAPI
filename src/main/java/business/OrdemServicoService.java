@@ -22,7 +22,6 @@ public class OrdemServicoService {
     private final MecanicoRepository mecanicoRepository;
     private final VeiculoRepository veiculoRepository;
 
-
     @Transactional
     public Veiculo cadastrarVeiculo(VeiculoRequestDTO dto) {
         if (veiculoRepository.existsByPlaca(dto.placa())) {
