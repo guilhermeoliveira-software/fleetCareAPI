@@ -1,5 +1,6 @@
 package entity;
 
+import business.enums.StatusOrdem;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "OrdemServico")
+@Table(name = "ordem_servico")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,19 +22,18 @@ public class OrdemServico {
     private String descricaoProblema;
     @Column(name = "valorOrcado")
     private double valorOrcado;
-    @Column(name = "mecanicoResponsavel", length = 255)
-    private String mecanicoResponsavel;
 
-    @ManyToOne
-    @JoinColumn(name = "mecanico_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mecanico_id", nullable = true)
     private Mecanico mecanico;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "veiculo_id", nullable = false)
     private Veiculo veiculo;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "status")
-    private String status;
+    private StatusOrdem status;
 
 
 }
