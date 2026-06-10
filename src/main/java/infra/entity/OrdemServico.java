@@ -1,4 +1,4 @@
-package entity;
+package infra.entity;
 
 import business.enums.StatusOrdem;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package entity;
+package infra.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
-package repository;
+package infra.repository;
 
-import entity.Mecanico;
+import infra.entity.Mecanico;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
