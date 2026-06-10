@@ -1,18 +1,18 @@
-package business;
+package business.service;
 
 import business.enums.StatusOrdem;
 import business.exception.BusinessRuleException;
 import business.exception.ResourceNotFoundException;
-import dto.VeiculoRequestDTO;
-import entity.Mecanico;
-import entity.OrdemServico;
-import entity.Veiculo;
+import infra.dto.VeiculoRequestDTO;
+import infra.entity.Mecanico;
+import infra.entity.OrdemServico;
+import infra.entity.Veiculo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.MecanicoRepository;
-import repository.OrdemServicoRepository;
-import repository.VeiculoRepository;
+import infra.repository.MecanicoRepository;
+import infra.repository.OrdemServicoRepository;
+import infra.repository.VeiculoRepository;
 
 @Service
 @RequiredArgsConstructor

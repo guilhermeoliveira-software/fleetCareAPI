@@ -1,6 +1,6 @@
-package repository;
+package infra.repository;
 
-import entity.OrdemServico;
+import infra.entity.OrdemServico;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

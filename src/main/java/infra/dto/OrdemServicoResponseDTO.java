@@ -1,7 +1,7 @@
-package dto;
+package infra.dto;
 
-import entity.Mecanico;
-import entity.Veiculo;
+import infra.entity.Mecanico;
+import infra.entity.Veiculo;
 
 public record OrdemServicoResponseDTO(
         Long id,
