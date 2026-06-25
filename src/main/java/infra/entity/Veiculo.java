@@ -32,4 +32,8 @@ public class Veiculo {
     @OneToMany(mappedBy = "veiculo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrdemServico> ordensDeServico;
 
+    @ManyToOne
+    @JoinColumn(name = "cliente_id", nullable = false)
+    private Cliente cliente;
+
 }

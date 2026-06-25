@@ -1,7 +1,6 @@
-package com.techlevs.fleetCareAPI.controller;
+package controller;
 
-import com.techlevs.fleetCareAPI.business.OrdemServicoService;
-import com.techlevs.fleetCareAPI.business.enums.StatusOrdem;
+import business.enums.StatusOrdem;
 import com.techlevs.fleetCareAPI.entity.OrdemServico;
 import org.springframework.web.bind.annotation.*;
 
