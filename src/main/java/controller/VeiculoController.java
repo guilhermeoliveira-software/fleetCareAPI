@@ -1,6 +1,5 @@
-package com.techlevs.fleetCareAPI.controller;
+package controller;
 
-import com.techlevs.fleetCareAPI.business.OrdemServicoService;
 import com.techlevs.fleetCareAPI.dto.VeiculoRequestDTO;
 import com.techlevs.fleetCareAPI.entity.Veiculo;
 import org.springframework.http.HttpStatus;
